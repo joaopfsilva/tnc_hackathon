@@ -1,5 +1,9 @@
 ## Hackathon
 
+### How to run
+ - install Expo
+ - expo start
+
 ### Goal
  - integrate navigation
  - use react-native core components

@@ -1,19 +1,18 @@
 import React from 'react';
 import { StyleSheet, View, TouchableOpacity, Text} from 'react-native';
 
-import Products from '../components/ProductsList';
+import ProductsList from '../components/ProductsList';
 import { PRODUCTS } from '../data/dummy-products';
-
 
 const ProductsScreen = props => {
   const products = PRODUCTS;
 
   return(
     <View style={styles.container}>
-      <Products {...products} />
-      <TouchableOpacity style={styles.btn}>
-          <Text style={{fontSize: 20, textAlign: 'center'}}>Next</Text>
-      </TouchableOpacity>
+        <ProductsList products={products} />
+        <TouchableOpacity style={styles.btn}>
+            <Text style={{fontSize: 20, textAlign: 'center'}}>Next</Text>
+        </TouchableOpacity>
     </View>
   )
 }
@@ -25,7 +24,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around'
   },
   btn: {
-    marginTop: 40,
+    marginTop: 10,
     fontStyle: 'italic',
     backgroundColor: '#5FBA7E',
     borderRadius: 7,
@@ -34,7 +33,7 @@ const styles = StyleSheet.create({
     paddingRight: 5,
     paddingLeft: 5,
     paddingBottom: 10,
-    marginBottom: 50,
+    marginBottom: 20,
     width: 200,
     fontStyle: 'italic'
   }

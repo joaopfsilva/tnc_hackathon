@@ -26,7 +26,7 @@ const Product = props => {
   return(
     <GestureRecognizer onSwipe={(direction, state) => onSwipe(direction, state)}>
       <View style={styles.container}>
-        <Image source={{uri: props.image_url}} style={styles.img}/>
+        <Image source={{uri: props.product.image_url}} style={styles.img}/>
         <Text>{gestureName}</Text>
       </View>
     </GestureRecognizer>
@@ -41,8 +41,9 @@ const styles = StyleSheet.create({
     height: '100%'
   },
   img: {
-    height: 300,
-    width: 300,
+    height: 200,
+    width: 200,
+    margin: 40,
     justifyContent: 'center',
     alignItems: 'center',
   },
